@@ -1,0 +1,20 @@
+<head>
+	<title>js Price feed</title>
+	
+
+</head>
+
+<body>
+	{{renderPage}}
+</body>
+
+
+<template name="exchangesTemplate">
+<h1>Exchanges</h1>
+	<ul>
+		{{#each exchanges}}
+			<li>{{code}}</li>
+		{{/each}}
+	</ul>
+
+</template>
