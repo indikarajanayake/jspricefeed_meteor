@@ -1,0 +1,20 @@
+<template name="exchangeTemplate">
+	
+	{{#with exchange}}
+		<h1>Exchange {{code}}</h1>
+			<table class="table table-stiped table-bordered table-condensed">
+			<thead>
+				<th>code</th>
+				<th>ltp</th>
+				<th>ltq</th>
+
+			</thead>	
+			<tbody>
+		{{#each symbols}}
+			<tr><td>{{code}}</td><td>{{ltp}}</td><td>{{ltq}}</td>
+			{{/each}}
+		</tbody>
+			</table>
+	{{/with}}
+	
+</template>
