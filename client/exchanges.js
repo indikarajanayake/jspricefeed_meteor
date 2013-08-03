@@ -1,11 +1,12 @@
 Exchanges	= new Meteor.Collection("exchanges");
 
 Template.exchangesTemplate.exchanges	= function(){
+	Exchanges.remove();	
 	return Exchanges.find();
 };
 
 Template.exchangeTemplate.exchange	= function(){
-	return Exchanges.findOne(Session.get('currentExchangeId'));
+	return Exchanges.findOne({code:Session.get('currentExchangeId')});
 };
 
 
